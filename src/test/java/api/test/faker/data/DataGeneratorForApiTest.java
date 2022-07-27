@@ -6,7 +6,7 @@ import java.util.Date;
 import com.github.javafaker.Faker;
 
 public class DataGeneratorForApiTest {
-
+// this is just a test assignment
 	public static String getEmail() {
 		Faker faker = new Faker();
 		return faker.name().firstName() + faker.name().lastName() + "@tekschool.com";

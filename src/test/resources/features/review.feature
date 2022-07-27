@@ -28,7 +28,7 @@ Feature: Creating new account and adding address and phone and car in the new ac
       "email": "#(email)", 
       "title": "Mr.", 
       "firstName": "#(firstName)", 
-      "lastName": "lastName", 
+      "lastName": "#(lastName)", 
       "gender": "MALE", 
       "maritalStatus": "MARRIED", 
       "employmentStatus": "Employed", 
@@ -62,11 +62,11 @@ Feature: Creating new account and adding address and phone and car in the new ac
     And request
       """
       {
-      "addressType": "Apartment",
-      "addressLine1": "5050 Somewhere Drive, Apt 222",
-      "city": "Richmond",
-      "state": "Virginia",
-      "postalCode": "22033",
+      "addressType": "#(addressType)",
+      "addressLine1": "#(addressLine1)",
+      "city": "#(city)",
+      "state": "#(state)",
+      "postalCode": "#(postalCode)",
       "current": true
       }
       """
@@ -84,10 +84,10 @@ Feature: Creating new account and adding address and phone and car in the new ac
     And request
       """
       {
-      "phoneNumber": "202-222-7777",
-      "phoneExtension": "2277",
-      "phoneTime": "Day",
-      "phoneType": "Mobile"
+      "phoneNumber": "#(phoneNumber)",
+      "phoneExtension": "#(phoneExtension)",
+      "phoneTime": "#(phoneTime)",
+      "phoneType": "#(phoneType)"
       }
       """
     When method post
